@@ -1,0 +1,126 @@
+<div class="header">
+	<div class="header-title left text">Modals</div>
+</div>
+<div class="section top">
+	<div class="section-box">
+		<div class="section-main">
+			<div class="vbox">
+				<div class="section-section p15">
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<input class="btn btn-default Modals00" type="button" value="最简单的调用">
+							</div>
+							<div class="panel-footer">
+								<code>JY.alert("Hi");</code>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<input class="btn btn-default Modals01" type="button" value="confirm">
+							</div>
+							<div class="panel-footer">
+								<code>JY.confirm("Hi");</code>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<input class="btn btn-default Modals02" type="button" value="MSG提示">
+							</div>
+							<div class="panel-footer">
+								<code>JY.msg("Hi");</code>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<input class="btn btn-default Modals03" type="button" value="Prompt">
+							</div>
+							<div class="panel-footer">
+								<code>JY.prompt("Hi");</code>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<input class="btn btn-default Modals99" type="button" value="alert">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//Modals
+$(".Modals00").click(function(){
+	JY.alert('Hi~', function(index){
+		alert("回调");
+		JY.Dialogclose(index);
+	});
+});
+
+$(".Modals01").click(function(){
+	JY.confirm('CONFIRM',{
+		btn: ['确定','取消']
+		},function(index){
+			alert("确定回调");
+			JY.Dialogclose(index);
+		},function(index){
+			alert("取消回调");
+	});
+});
+
+$(".Modals02").click(function(){
+	JY.msg('Hi~',{
+		time: 2000,
+	});
+});
+
+$(".Modals03").click(function(){
+	JY.prompt({
+		title: '随便写点啥，并确认',
+		formType: 0
+	},function(text){
+		alert(text);
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

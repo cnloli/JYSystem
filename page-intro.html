@@ -1,0 +1,40 @@
+<div class="header">
+	<div class="header-title left text">intro</div>
+</div>
+<div class="section top">
+	<div class="section-box">
+		<div class="section-main">
+			<div class="vbox">
+				<div class="section-section p15">
+					<a class="btn btn-large btn-success" id="stintro" href="javascript:void(0);">Show me how</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+
+
+$("#stintro").click(function(){
+	var intro = introJs();
+    intro.setOptions({
+      steps: [
+      {
+          element: '.sidebar-menu .header',
+          intro: '<p class="h4 text-uc"><strong>1: 项目或主分页选择</strong></p><p>这些信息都可以在JS中定位处理</p>',
+          position: 'right'
+        },
+		{
+          element: '.main-content .header',
+          intro: '<p class="h4 text-uc"><strong>2: 页面头部操作栏</strong></p><p>You can quick switch your projects here.</p>',
+          position: 'bottom'
+        }
+      ],
+      showBullets: true,
+    });
+
+    intro.start();
+});
+
+</script>
